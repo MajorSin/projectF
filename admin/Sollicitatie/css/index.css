@@ -1,0 +1,237 @@
+@charset "utf-8";
+/* CSS Document */
+/*ALGEMEEN*/
+*{
+	font-family: 'Muli', sans-serif;
+}
+body, html{
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+body, html {
+	background: url(../img/background.jpg) no-repeat center center fixed;
+	background-size: cover;
+	background-attachment: fixed;
+}
+#main{
+	margin-left: 300px;
+}
+#main{
+	flex: 1;
+}
+/*--------------------------------------------------------------------*/
+/*HEADER*/
+/*--------------------------------------------------------------------*/
+header{
+	background-color: rgba(58, 58, 58, 0.89);
+	height: 75px;
+	line-height: 75px;
+}
+#headertext{
+	padding-left: 70px;
+	display: inline-block;
+  	vertical-align: middle;
+	line-height: normal;
+	color: rgba(248,248,248,0.89);
+}
+#headerimg{
+    white-space: nowrap;
+}
+#headerimghelper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+#headerimg img{
+	cursor: pointer;
+	float: right;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+  	vertical-align: middle;
+  	line-height: normal;
+}
+/*DROPDOWN*/
+#dropdown{
+	display: none;
+	position: absolute;
+	right: 0px;
+	margin-right: 10px;
+  	background-color: #f1f1f1;
+  	min-width: 160px;
+  	overflow: auto;
+  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  	z-index: 1;
+}
+/*--------------------------------------------------------------------*/
+/*NAV*/
+/*--------------------------------------------------------------------*/
+#bannerlogo{
+	width: 210px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.sidenavadmin{
+	height: 100%; 
+  	width: 300px; 
+  	position: fixed; 
+  	z-index: 1;
+  	top: 0; 
+  	left: 0;
+  	background-color: rgba(43, 43, 43, 0.89);
+  	overflow-x: hidden;
+	padding-top: 20px;
+}
+.sidenavadmin a{
+	color: rgba(248,248,248,0.89);
+	padding: 6px 8px 6px 16px;
+  	text-decoration: none;
+  	font-size: 20px;
+	padding-left: 50px;
+  	display: block;
+}
+.sidenavadmin a:hover{
+	color: rgba(142,142,142,1.00);
+  	text-decoration: none;
+}
+.scheidingmenu{
+	width: 220px;
+}
+.navtext{
+	padding-left: 25px;
+	font-size: 25px;
+	color: rgba(248,248,248,0.89);
+}
+.scheidingmenu{
+	width: 250px;
+	border: 0.5px solid rgba(248,248,248,0.89);
+}
+.active{
+	color: rgba(142,142,142,1.00) !important;
+	text-decoration: bold;
+}
+/*RESPONSIVE NAV*/
+@media screen and (max-height: 450px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/*SOLLICITATIE INFO*/
+.sollicitatie{
+	margin: 30px 70px 0px 70px;
+	width: auto;
+}
+.infoheadersolli{
+	background-color: rgba(58, 58, 58, 0.89);
+	padding: 10px 15px;
+	border-radius: 3px 3px 0px 0px;
+	color: rgba(248,248,248,0.89);
+}
+.infotextsolli{
+	padding: 10px 15px;
+	background-color: rgba(43, 43, 43, 0.89);
+	border-radius: 0px 0px 3px 3px;
+	color: rgba(248,248,248,0.89);
+}
+#info-wrapper{
+	padding: 25px 0px;
+	width: 100%;
+}
+/*--------------------------------------------------------------------*/
+/*SOLLICITATIE INDIENEN*/
+/*--------------------------------------------------------------------*/
+.headersolli{
+	background-color: rgba(58, 58, 58, 0.89);
+	padding: 10px 15px;
+	border-radius: 3px 3px 0px 0px;
+	color: rgba(248,248,248,0.89);
+}
+.solli-indienen{
+	padding: 10px 15px;
+	background-color: rgba(43, 43, 43, 0.89);
+	border-radius: 0px 0px 3px 3px;
+	color: rgba(248,248,248,0.89);
+}
+#solli-button{
+	background-color: rgb(55, 125, 255);
+	margin-left: 15px;
+	vertical-align: middle;
+}
+#solli-button i {
+	display: inline-block;
+	vertical-align: top;
+}
+#solli-button:hover{
+	background-color: rgb(74, 213, 255);
+}
+.solli-indienen label {
+	color: rgb(231, 231, 231);
+}
+.solli-indienen .prefix.active {
+     color: rgb(231, 231, 231);
+}
+.solli-indienen input[type=text].valid {
+     border-bottom: 1px solid rgb(231, 231, 231);
+     box-shadow: 0 1px 0 0 rgb(231, 231, 231);
+}
+.solli-indienen input[type=text]:focus + label {
+	color: rgb(231, 231, 231) !important;
+}
+.solli-indienen input[type=text]:focus {
+	border-bottom: 1px solid rgb(231, 231, 231) !important;
+	box-shadow: 0 1px 0 0 rgb(231, 231, 231) !important;
+}
+.solli-indienen input[type=text].valid {
+     border-bottom: 1px solid rgb(231, 231, 231);
+     box-shadow: 0 1px 0 0 rgb(231, 231, 231);
+}
+.solli-indienen input[type=text]:focus + label {
+	color: rgb(231, 231, 231) !important;
+}
+.solli-indienen input[type=text]:focus {
+	border-bottom: 1px solid rgb(231, 231, 231) !important;
+	box-shadow: 0 1px 0 0 rgb(231, 231, 231) !important;
+}
+input, textarea{
+	color: rgb(231, 231, 231);
+}
+/*TEXTAREA MATERIAL CSS*/
+.solli-indienen textarea[type=text].valid {
+	border-bottom: 1px solid rgb(231, 231, 231);
+	box-shadow: 0 1px 0 0 rgb(231, 231, 231);
+}
+.solli-indienen textarea[type=text]:focus + label {
+   color: rgb(231, 231, 231) !important;
+}
+.solli-indienen textarea[type=text]:focus {
+   border-bottom: 1px solid rgb(231, 231, 231) !important;
+   box-shadow: 0 1px 0 0 rgb(231, 231, 231) !important;
+}
+.solli-indienen textarea[type=text]:focus + label {
+   color: rgb(231, 231, 231) !important;
+}
+.solli-indienen textarea[type=text]:focus {
+   border-bottom: 1px solid rgb(231, 231, 231) !important;
+   box-shadow: 0 1px 0 0 rgb(231, 231, 231) !important;
+}
+/*--------------------------------------------------------------------*/
+/*FOOTER*/
+/*--------------------------------------------------------------------*/
+footer{
+	margin-top: 30px;
+	margin-left: 300px;
+	padding: 10px 0px;
+	text-align: center;
+	background-color: rgba(58, 58, 58, 0.89);
+	color: rgba(248,248,248,0.89);
+}
+footer a{
+	color: rgba(202, 202, 202, 1.00);
+}
+footer a:hover{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}

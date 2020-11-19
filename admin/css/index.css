@@ -1,0 +1,172 @@
+@charset "utf-8";
+/* CSS Document */
+/*ALGEMEEN*/
+*{
+	font-family: 'Muli', sans-serif;
+}
+body, html{
+  height: 100%;
+  margin: 0;
+}
+body, html {
+	background: url(../img/background.jpg) no-repeat center center fixed;
+	background-size: cover;
+	background-attachment: fixed;
+}
+/*HEADER*/
+header{
+	background-color: rgba(58, 58, 58, 0.89);
+	height: 75px;
+  	line-height: 75px;
+}
+#headertext{
+	padding-left: 70px;
+	display: inline-block;
+  	vertical-align: middle;
+	line-height: normal;
+	color: rgba(248,248,248,0.89);
+}
+#headerimg{
+    white-space: nowrap;
+}
+#headerimghelper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+#headerimg img{
+	cursor: pointer;
+	float: right;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+  	vertical-align: middle;
+  	line-height: normal;
+}
+/*DROPDOWN*/
+#dropdown{
+	display: none;
+	position: absolute;
+	right: 0px;
+	margin-right: 10px;
+  	background-color: #f1f1f1;
+  	min-width: 160px;
+  	overflow: auto;
+  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  	z-index: 1;
+}
+/*NAV*/
+#bannerlogo{
+	width: 210px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.sidenav{
+	height: 100%; 
+  	width: 300px; 
+  	position: fixed; 
+  	z-index: 1;
+  	top: 0; 
+  	left: 0;
+  	background-color: rgba(43, 43, 43, 0.89);
+  	overflow-x: hidden;
+	padding-top: 20px;
+}
+.sidenav a{
+	color: rgba(248,248,248,0.89);
+	padding: 6px 8px 6px 16px;
+  	text-decoration: none;
+  	font-size: 20px;
+	padding-left: 50px;
+  	display: block;
+}
+.sidenav a:hover{
+	color: rgba(142,142,142,1.00);
+  	text-decoration: none;
+}
+#main{
+  margin-left: 300px;
+}
+.scheidingmenu{
+	width: 220px;
+}
+.navtext{
+	padding-left: 25px;
+	font-size: 25px;
+	color: rgba(248,248,248,0.89);
+}
+.scheidingmenu{
+	width: 250px;
+	border: 0.5px solid rgba(248,248,248,0.89);
+}
+.active{
+	color: rgba(142,142,142,1.00) !important;
+	text-decoration: bold;
+}
+/*RESPONSIVE NAV*/
+@media screen and (max-height: 450px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/*INTRO TEXT*/
+#intro{
+	margin-top: 30px;
+	padding: 0px 70px;
+}
+#welkomheader{
+	background-color: rgba(58, 58, 58, 0.89);
+	padding: 10px 15px;
+	border-radius: 3px 3px 0px 0px;
+	color: rgba(248,248,248,0.89);
+}
+#introtext{
+	padding: 10px 15px;
+	background-color: rgba(43, 43, 43, 0.89);
+	border-radius: 0px 0px 3px 3px;
+	color: rgba(248,248,248,0.89);
+}
+#introimg{
+	float: left;
+}
+/*GRAFIEK*/
+#grafiek{
+	margin-top: 30px;
+	padding: 0 70px;
+}
+#grafiekheader{
+	background-color: rgba(58, 58, 58, 0.89);
+	padding: 10px 15px;
+	border-radius: 3px 3px 0px 0px;
+	color: rgba(248,248,248,0.89);
+}
+#grafiekinhoud{
+	padding: 30px 15px;
+	background-color: rgba(43, 43, 43, 0.89);
+	border-radius: 0px 0px 3px 3px;
+}
+.infosolli{
+	float: right;
+	font-size: 40px;
+	vertical-align: middle;
+	color: rgba(202, 202, 202, 1.00);
+}
+.infosolli:hover{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+/*FOOTER*/
+footer{
+	margin-top: 30px;
+	padding: 10px 0px;
+	text-align: center;
+	background-color: rgba(58, 58, 58, 0.89);
+	color: rgba(248,248,248,0.89);
+}
+footer a{
+	color: rgba(202, 202, 202, 1.00);
+}
+footer a:hover{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}

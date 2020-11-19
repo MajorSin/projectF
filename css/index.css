@@ -1,0 +1,584 @@
+@charset "utf-8";
+/* CSS Document */
+/*MAIN*/
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+body{
+	font-family: 'Ubuntu', 'sans-serif',  'arial';
+	background-color: #F7F7F7;
+}
+#content{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	display: none;
+}
+/*-------------------------------------
+LOADER
+-------------------------------------*/
+#loaderdiv{
+	width: 100%;
+	height: 100%;
+}
+#loader{
+	margin-top: 100px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*-------------------------------------
+HEADER
+-------------------------------------*/
+/*NAV*/
+#nav{
+	background: transparent;
+	position: absolute;
+	display: block;
+	width: 100%;
+	z-index: 99999;
+	transition: all ease .5s;
+	float: right;
+	box-shadow: none;
+}
+#nav.shrinknav {
+	transition: all ease .5s;
+	background-color: rgba(57,57,57,1.00);
+	position: fixed;
+	animation-name: nav;
+	animation-duration: 0.15s;
+}
+#nav ul{
+	float: right;
+	text-align: right;
+	list-style-type: none;
+}
+#nav li{
+	color: white;
+}
+li a{
+	text-decoration: none;
+	padding: 14px 16px;
+}
+.navdesktoptext.shrinktext{
+	display: block;
+	animation-name: shrinktext;
+	animation-duration: 0.25s;
+}
+@keyframes shrinktext{
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+li a:hover{
+	text-decoration: none;
+	color: white;
+}
+li a:link{
+	text-decoration: none;
+	color: white;
+}
+.activenav{
+	font-weight: bold;
+}
+@keyframes nav {
+  0%   {
+		height: 0px;
+	}
+  100% {
+
+  }
+}
+/*LOGO*/
+#logodiv.logoafter{
+	animation-name: logoafter;
+	animation-duration: 0.25s;
+}
+@keyframes logoafter{
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+#logodesktop{
+	width: 150px;
+	cursor: pointer;
+}
+/*-------------------------------------
+HAMBURGERMENU
+-------------------------------------*/
+/*LOGO*/
+#logomobileimg{
+	display: none;
+	width: 40px;
+	cursor: pointer;
+}
+/*NAV*/
+#hamburger-menu {
+	margin-top: 4px;
+	width: 60px;
+	height: 45px;
+	position: relative;
+	transform: rotate(0deg);
+	transition: .5s ease-in-out;
+	cursor: pointer;
+	float: right;
+}
+#hamburger-menu span {
+	display: block;
+	position: absolute;
+	height: 9px;
+	width: 100%;
+	background: rgba(212,234,200,1.00);;
+	border-radius: 9px;
+	opacity: 1;
+	left: 0;
+	transform: rotate(0deg);
+	transition: .25s ease-in-out;
+}
+#hamburger-menu span:nth-child(1) {
+	top: 0px;
+	transform-origin: left center;
+}
+#hamburger-menu span:nth-child(2) {
+  	top: 18px;
+	transform-origin: left center;
+}
+#hamburger-menu span:nth-child(3) {
+  	top: 36px;
+  	transform-origin: left center;
+}
+#hamburger-menu.open span:nth-child(1) {
+  	transform: rotate(45deg);
+  	top: -3px;
+  	left: 8px;
+}
+#hamburger-menu.open span:nth-child(2) {
+  	width: 0%;
+  	opacity: 0;
+}
+#hamburger-menu.open span:nth-child(3) {
+  	transform: rotate(-45deg);
+  	top: 39px;
+  	left: 8px;
+}
+#responsivemobilenav{
+	display: none;
+	right: 0px;
+	float: right;
+	text-align: right;
+}
+#navmobilecontent{
+	position: absolute;
+	position: fixed;
+	z-index: 3;
+	color: white;
+	height: 0px;
+	width: 100%;
+	background-color: rgba(41,41,41,0.94);
+	padding-top: 70px;
+	transition-timing-function: ease-out;
+	transition-property: height;
+  	transition-duration: 0.5s;
+}
+.navmobilecontentToggle{
+	height: 100% !important;
+	width: 100% !important;
+}
+#navmobilecontentcloseanimation{
+	animation-name: navmobilecontentanimation;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-out;
+	animation-direction: reverse;
+	display: none;
+}
+@keyframes navmobilecontentanimation{
+	0%   {
+		height: 0%;
+	}
+	100% {
+		height: 100%;
+	}
+}
+#mobilenavli{
+	font-size: 20px;
+	list-style: none;
+	padding-bottom: 10px;
+}
+#mobilenavli:hover{
+	color: rgb(155, 155, 155);
+}
+/*-------------------------------------
+BANNER
+-------------------------------------*/
+#banner{
+	width: 100%;
+	background-color: black;
+	color: white;
+	position: relative;
+	height: 80%;
+}
+#bannerimg{
+	background-image: url(../img/Back.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	padding-top: 90px;
+	filter: blur(8px);
+}
+#bannerdiv{
+  	background-color: rgba(34, 34, 34, 0.425);
+	border-radius: 2px;
+  	color: white;
+  	position: absolute;
+  	top: 300px;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	z-index: 2;
+	width: 100%;
+  	padding: 20px;
+  	text-align: center;
+}
+/*-------------------------------------
+BESCHRIJVING
+-------------------------------------*/
+#hoofdtitel{
+	font-family: 'Pacifico', cursive;
+	text-align: left;
+}
+#scheidingbanner{
+	border: none;
+	width: 400px;
+	height: 2px;
+	margin: 0;
+	background-color: white;
+}
+#beschrijving p{
+	width: 400px;
+	text-align: left;
+}
+#btnbanner{
+	text-align: left;
+}
+/*-------------------------------------
+LOGIN
+-------------------------------------*/
+#login{
+	color: rgba(55,55,55,1.00);
+	border-radius: 2px;
+	background-color: rgba(255,255,255,0.66);
+	text-align: center;
+}
+#login h1{
+	padding-top: 11px;
+	font-family: 'Pacifico', cursive;
+}
+/*LOGIN FORM*/
+#login .input-field label {
+	color: rgba(55,55,55,1.00);
+}
+#login .input-field .prefix.active {
+     color: rgba(11,11,11,1.00)	;
+}
+#login .input-field input[type=text].valid {
+     border-bottom: 1px solid rgba(35,35,35,1.00);
+     box-shadow: 0 1px 0 0 rgba(55,55,55,1.00);
+}
+#login .input-field input[type=text]:focus + label {
+	color: rgba(55,55,55,1.00) !important;
+}
+#login .input-field input[type=text]:focus {
+	border-bottom: 1px solid rgba(55,55,55,1.00) !important;
+	box-shadow: 0 1px 0 0 rgba(55,55,55,1.00) !important;
+}
+#login .input-field input[type=password].valid {
+     border-bottom: 1px solid rgba(35,35,35,1.00);
+     box-shadow: 0 1px 0 0 rgba(55,55,55,1.00);
+}
+#login .input-field input[type=password]:focus + label {
+	color: rgba(55,55,55,1.00) !important;
+}
+#login .input-field input[type=password]:focus {
+	border-bottom: 1px solid rgba(55,55,55,1.00) !important;
+	box-shadow: 0 1px 0 0 rgba(55,55,55,1.00) !important;
+}
+.input-field #msg.valid {
+     border-bottom: 1px solid rgba(35,35,35,1.00);
+     box-shadow: 0 1px 0 0 rgba(55,55,55,1.00);
+}
+.input-field #msg:focus + label {
+	color: rgba(55,55,55,1.00) !important;
+}
+.input-field #msg:focus {
+	border-bottom: 1px solid rgba(55,55,55,1.00) !important;
+	box-shadow: 0 1px 0 0 rgba(55,55,55,1.00) !important;
+}
+.input-field #msg.valid {
+     border-bottom: 1px solid rgba(35,35,35,1.00);
+     box-shadow: 0 1px 0 0 rgba(55,55,55,1.00);
+}
+.input-field #msg:focus + label {
+	color: rgba(55,55,55,1.00) !important;
+}
+.input-field #msg:focus {
+	border-bottom: 1px solid rgba(55,55,55,1.00) !important;
+	box-shadow: 0 1px 0 0 rgba(55,55,55,1.00) !important;
+}
+/*-------------------------------------
+OVER ONS
+-------------------------------------*/
+#overons{
+	width: 100%;
+	margin-top: 40px;
+	background-image: url("../img/overonsbg.jpeg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	color: white;
+}
+#overons h1{
+	text-align: center;
+	padding-bottom: 3px;
+	font-family: 'Pacifico', cursive;
+}
+#overonsbgdiv{
+	border-radius: 2px;
+	padding: 15px 40px 15px 40px;
+	background-color: rgba(34, 34, 34, 0.85);
+}
+#overonsdiv{
+	padding: 40px 0px 40px 0px;
+}
+/*-------------------------------------
+VRAGEN
+-------------------------------------*/
+#vragen{
+	margin-top: 25px;
+}
+#vragen h1{
+	text-align: center;
+	margin-bottom: 20px;
+	font-family: 'Pacifico', cursive;
+}
+/*CONTACT*/
+#contact{
+	margin-top: 20px;
+}
+#contact h1{
+	text-align: center;
+	padding-bottom: 9px;
+	font-family: 'Pacifico', cursive;
+}
+/*-------------------------------------
+CONTACT FORM
+-------------------------------------*/
+#contact .input-field label {
+	color: rgba(55,55,55,1.00);
+}
+#contact .input-field .prefix.active {
+     color: rgba(11,11,11,1.00)	;
+}
+#contact .input-field input[type=text].valid {
+     border-bottom: 1px solid rgba(35,35,35,1.00);
+     box-shadow: 0 1px 0 0 rgba(55,55,55,1.00);
+}
+#contact .input-field input[type=text]:focus + label {
+	color: rgba(55,55,55,1.00) !important;
+}
+#contact .input-field input[type=text]:focus {
+	border-bottom: 1px solid rgba(55,55,55,1.00) !important;
+	box-shadow: 0 1px 0 0 rgba(55,55,55,1.00) !important;
+}
+#contact .input-field input[type=password].valid {
+     border-bottom: 1px solid rgba(35,35,35,1.00);
+     box-shadow: 0 1px 0 0 rgba(55,55,55,1.00);
+}
+#contact .input-field input[type=password]:focus + label {
+	color: rgba(55,55,55,1.00) !important;
+}
+#contact .input-field input[type=password]:focus {
+	border-bottom: 1px solid rgba(55,55,55,1.00) !important;
+	box-shadow: 0 1px 0 0 rgba(55,55,55,1.00) !important;
+}
+#contact .input-field #msg.valid {
+     border-bottom: 1px solid rgba(35,35,35,1.00);
+     box-shadow: 0 1px 0 0 rgba(55,55,55,1.00);
+}
+#contact .input-field #msg:focus + label {
+	color: rgba(55,55,55,1.00) !important;
+}
+#contact .input-field #msg:focus {
+	border-bottom: 1px solid rgba(55,55,55,1.00) !important;
+	box-shadow: 0 1px 0 0 rgba(55,55,55,1.00) !important;
+}
+#contact .input-field #msg.valid {
+     border-bottom: 1px solid rgba(35,35,35,1.00);
+     box-shadow: 0 1px 0 0 rgba(55,55,55,1.00);
+}
+#contact .input-field #msg:focus + label {
+	color: rgba(55,55,55,1.00) !important;
+}
+#contact .input-field #msg:focus {
+	border-bottom: 1px solid rgba(55,55,55,1.00) !important;
+	box-shadow: 0 1px 0 0 rgba(55,55,55,1.00) !important;
+}
+/*-------------------------------------
+FOOTER
+-------------------------------------*/
+footer{
+	padding-top: 20px;
+	background-color: rgba(36,36,36,1.00);
+	color: rgba(231,231,231,1.00);
+}
+/*SOCIALMEDIA*/
+.sociallogo{
+	width: 40px;
+}
+.socialtext{
+	padding-left: 4px;
+}
+#socialmedia a{
+	color: rgba(202, 202, 202, 1.00);
+}
+#socialmedia a:hover{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+#socialmedia a:link{
+	text-decoration: none;
+}
+/*LINKS*/
+#links a{
+	color: rgba(202, 202, 202, 1.00);
+}
+#links a:hover{
+	color: rgb(255, 255, 255);
+}
+/*AFDELINGEN*/
+#andereafdelingenul a{
+	color: rgba(202, 202, 202, 1.00);
+}
+#andereafdelingenul a:hover{
+	color: rgb(255, 255, 255);
+}
+#footernav{
+	cursor: pointer;
+}
+/*NAVBAR*/
+#footernav li::before{
+	content: "-";
+}
+footer li{
+	padding-bottom: 11px;
+}
+#footernav a{
+	color: rgba(202, 202, 202, 1.00);
+}
+#footernav a:hover{
+	color: rgb(255, 255, 255);
+}
+/*FOOTER AFSLUITING*/
+#afsluiting{
+	text-align: center;
+	background-color: rgb(53, 53, 53);
+	padding: 17px 0px;	
+}
+#afsluiting a{
+	color: rgba(202, 202, 202, 1.00);
+}
+#afsluiting a:hover{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+#afsluiting a:link{
+	text-decoration: none;
+}
+/*-------------------------------------
+RESPONSIVE MAX-WIDTH 991: TABLET
+-------------------------------------*/
+@media only screen and (max-width: 991px){
+	/*-------------------------------------
+	NAVBAR
+	-------------------------------------*/
+	#navdesktop{
+		display: none;
+	}
+	#responsivemobilenav{
+		display: inline-block;
+	}
+	#navmobilecontent{
+		display: inline-block;
+	}
+	.logomobile{
+		display: none;
+	}
+}
+/*-------------------------------------
+RESPONSIVE MAX-WIDTH 575: MOBILE
+-------------------------------------*/
+@media only screen and (max-width: 575px){
+	/*-------------------------------------
+	NAVBAR
+	-------------------------------------*/
+	#navdesktop{
+		display: none;
+	}
+	#logodesktop{
+		display: none;
+	}
+	#logomobileimg{
+		display: inline-block;
+	}
+	#responsivemobilenav{
+		display: inline-block;
+	}
+	#navmobilecontent{
+		display: inline-block;
+	}
+	/*-------------------------------------
+	BANNER
+	-------------------------------------*/
+	#scheidingbanner{
+		width: 360px;
+	}
+	#bannerdiv{
+		background-color: rgba(0,0,0,0.00);
+		top: 340px;
+	}
+	#login{
+		margin-top: 30px;
+	}
+	/*-------------------------------------
+	CONTACT
+	-------------------------------------*/
+	#contactbtn{
+		margin-bottom: 20px;
+	}
+	/*-------------------------------------
+	FOOTER
+	-------------------------------------*/
+	#socialmedia{
+		margin-bottom: 15px;
+	}
+	#footerinforow {
+		margin-bottom: 0px;
+	}
+}
+@media only screen and (min-width: 575px){
+	/*-------------------------------------
+	NAVBAR
+	-------------------------------------*/
+	/*#navmobilecontent{
+		display: none !important;
+	}*/
+}

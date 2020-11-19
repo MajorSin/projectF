@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+/*MAIN*/
+html,body{
+	width: 100%;
+	height: 100%;
+}
+/*BANNER*/
+#banner{
+	width: 100%;
+	height: 80%;
+	background-color: black;
+	color: white;
+}
+#bannerimg{
+	background-image: url(../img/Back.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+}
+/*BESCHRIJVING*/
+#scheidingbanner{
+	border: none;
+	width: 400px;
+    height: 2px;
+	margin: 0;
+    background-color: white;
+}
+#beschrijving p{
+	width: 400px;
+}
+/*LOGIN*/
+#hoofdtitel{
+	font-family: 'Pacifico', cursive;
+}
+#login{
+	border-radius: 1px;
+	background-color: rgba(219,208,211,0.81);
+	text-align: center;
+}
